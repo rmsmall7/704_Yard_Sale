@@ -3,6 +3,7 @@ import Hero from "../components/Hero";
 import Container from "../components/Container";
 import Row from "../components/Row";
 import Col from "../components/Col";
+import SimpleMap from "../components/SimpleMap";
 
 function Home() {
   return (
@@ -35,6 +36,9 @@ function Home() {
               so that you will have your information saved along with the yard sales that you are interested in.
             </p>
           </Col>
+        </Row>
+        <Row>
+          <SimpleMap />
         </Row>
       </Container>
     </div>

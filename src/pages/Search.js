@@ -15,7 +15,7 @@ class Search extends Component {
       error: ""
     };
 
-    // When the component mounts, get a list of all available base breeds and update this.state.breeds
+
     componentDidMount() {
         API.getPost()
         .then(res => this.setState({ yardsales: res.data }))
