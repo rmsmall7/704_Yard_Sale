@@ -21,9 +21,11 @@ class Post extends Component {
   }
 
   loadPosts = () => {
-    API.getPost()
-      .then(res =>
-        this.setState({ posts: res.data, time: "", date: "", location: "", items: "" })
+    API.getPosts()
+      .then(res => {
+        console.log(res.data)
+       // this.setState({ posts: res.data, time: "", date: "", location: "", items: "" })
+      }
       )
       .catch(err => console.log(err));
   };
@@ -82,7 +84,7 @@ class Post extends Component {
                 name="location"
                 placeholder="Location (required)"
               />
-               <TextArea
+              <TextArea
                 value={this.state.items}
                 onChange={this.handleInputChange}
                 name="items"
@@ -114,8 +116,8 @@ class Post extends Component {
                 ))}
               </List>
             ) : (
-              <h3>No Results to Display</h3>
-            )}
+                <h3>No Results to Display</h3>
+              )}
           </Col>
         </Row>
       </Container>
