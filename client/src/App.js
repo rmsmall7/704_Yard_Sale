@@ -18,7 +18,7 @@ function App() {
           <Route exact path="/post" component={Post} />
           <Route exact path="/post/:id" component={Details} />
           <Route exact path="/search" component={Search} />
-          <Route exact path="/saved" component={Saved} />
+          {/* <Route exact path="/saved" component={Saved} /> */}
           <Route component={NoMatch} />
         </Switch>
       </div>
