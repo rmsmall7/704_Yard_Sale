@@ -9,6 +9,10 @@ export default {
   getPost: function(id) {
     return axios.get("/api/posts/" + id);
   },
+
+  addPost: function(postData) {
+    return axios.post("/api/posts", postData);
+  },
   // Deletes the book with the given id
   deletePost: function(id) {
     return axios.delete("/api/posts/" + id);
