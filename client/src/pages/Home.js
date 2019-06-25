@@ -9,13 +9,13 @@ function Home() {
   return (
     <div>
       <Hero backgroundImage="https://www.thespruce.com/thmb/ZZzAC5AE1tK4_xePtx3Hnad9-Ak=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/108077468956143_Anthony-Rosenberg_E-_Getty-Images_crop-58a47a505f9b58819c96d22f.jpg">
-        <h1>704 Yard Sales</h1>
+        <h1>704-Yard Sales</h1>
         <h2>Helping you find yard sales with ease!</h2>
       </Hero>
       <Container style={{ marginTop: 30 }}>
         <Row>
           <Col size="md-12">
-            <h1>Welcome To 704 Yardsales!</h1>
+            <h1>Welcome To 704-Yardsales!</h1>
           </Col>
         </Row>
         <Row>
