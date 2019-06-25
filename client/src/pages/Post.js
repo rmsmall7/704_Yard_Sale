@@ -5,7 +5,7 @@ import API from "../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
-import { Input, TextArea, FormBtn } from "../components/Form";
+import { Input, TextArea } from "../components/Form";
 
 class Post extends Component {
   state = {
@@ -16,23 +16,21 @@ class Post extends Component {
     items: ""
   };
 
-  componentDidMount() {
-    this.loadPosts();
-  }
+ 
 
-  loadPosts = () => {
-    API.getPosts()
-      .then(res => {
-        console.log(res.data)
-       // this.setState({ posts: res.data, time: "", date: "", location: "", items: "" })
-      }
-      )
-      .catch(err => console.log(err));
-  };
+  // loadPosts = () => {
+  //   API.getPosts()
+  //     .then(res => {
+  //       console.log(res.data)
+  //      // this.setState({ posts: res.data, time: "", date: "", location: "", items: "" })
+  //     }
+  //     )
+  //     .catch(err => console.log(err));
+  // };
 
   deletePost = id => {
     API.deletePost(id)
-      .then(res => this.loadPosts())
+      .then(res => this.getPost())
       .catch(err => console.log(err));
   };
 
@@ -46,13 +44,13 @@ class Post extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
     if (this.state.time && this.state.date && this.state.location) {
-      API.savePost({
+      API.addPost({
         time: this.state.time,
         date: this.state.date,
         location: this.state.location,
         items: this.state.items
       })
-        .then(res => this.loadPosts())
+        .then(res => this.getPost())
         .catch(err => console.log(err));
     }
   };
@@ -62,10 +60,7 @@ class Post extends Component {
       <Container fluid>
         <Row>
           <Col size="md-6">
-            <Jumbotron>
-              <h1></h1>
-            </Jumbotron>
-            <form>
+            <form onSubmit={this.handleFormSubmit}>
               <Input
                 value={this.state.time}
                 onChange={this.handleInputChange}
@@ -90,17 +85,12 @@ class Post extends Component {
                 name="items"
                 placeholder="Items (Optional)"
               />
-              <FormBtn
-                disabled={!(this.state.time && this.state.date && this.state.location)}
-                onClick={this.handleFormSubmit}
-              >
-                Submit Post
-              </FormBtn>
+            <input type="submit" value="Submit" />
             </form>
           </Col>
           <Col size="md-6 sm-12">
             <Jumbotron>
-              <h1></h1>
+              
             </Jumbotron>
             {this.state.posts.length ? (
               <List>
