@@ -1,7 +1,7 @@
 const path = require('path');
 const router = require('express').Router();
 
-router.get("/api/posts", (req, res) => {
+router.get("/api/yardsale", (req, res) => {
     res.send({ message: "build routes" })
 })
 
