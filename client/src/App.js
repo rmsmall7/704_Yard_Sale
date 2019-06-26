@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Menu from './components-new/Menu';
 import SuperContainer from './components-new/SuperContainer';
 import Header from './components-new/Header';
@@ -14,21 +14,24 @@ import Footer from './components-new/Footer';
 class App extends Component {
   render() {
     return (
-      <React.Fragment>
-        <Menu />
-        <SuperContainer>
-          <Header />
-          <SuperContainerInner>
-            <HomeBanner />
-            <YardSaleHeader />
-            <Row />
-            <YardSalePost />
-            <YardSalePost />
-            <YardSalePost />
-            <Footer />
-          </SuperContainerInner>
-        </SuperContainer>
-      </React.Fragment>
+      <Router>
+        <React.Fragment>
+          <Menu />
+          <SuperContainer>
+            <Header />
+            <SuperContainerInner>
+              <HomeBanner />
+              <YardSaleHeader />
+              <Row />
+              <YardSalePost />
+              <YardSalePost />
+              <YardSalePost />
+              <Footer />
+            </SuperContainerInner>
+          </SuperContainer>
+        </React.Fragment>
+        <Route path="/" component={}/>
+      </Router>
     );
 
   }
