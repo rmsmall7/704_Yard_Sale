@@ -1,7 +1,9 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const yardSchema = new Schema({
+const yardpostedSchema = new Schema({
+  _id: mongoose.Schema.Types.ObjectId,
+
   tite: {
     type: String, 
     required: true
@@ -29,6 +31,6 @@ const yardSchema = new Schema({
   }
 });
 
-const Yard = mongoose.model("Yard", yardSchema);
+const Yard = mongoose.model("Yard", yardpostSchema);
 
 module.exports = Yard;
