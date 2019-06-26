@@ -2,7 +2,7 @@ import React from 'react';
 
 function Header(props) {
   return (
-// Header//
+    // Header//
     <header className="header">
       <div className="header_overlay" />
       <div className="header_content d-flex flex-row align-items-center justify-content-start">
