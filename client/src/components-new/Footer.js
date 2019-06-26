@@ -14,7 +14,7 @@ export default class Footer extends Component {
                                     <div className="footer_logo">
                                         <a name="About">
                                             <div className="d-flex flex-row align-items-center justify-content-start">
-                                                <div className="footer_logo_icon"><img src="images/logo_2.png" alt=""></div>
+                                                <div className="footer_logo_icon"><img src="images/logo_2.png" alt=""></img></div>
                                                     <div>704 Yard Sale</div>
                                                 </div>
                                     
