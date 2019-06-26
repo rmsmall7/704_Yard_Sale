@@ -18,13 +18,12 @@ class App extends Component {
         <SuperContainer>
           <Header />
           <SuperContainerInner>
-            <HomeBanner></HomeBanner>
-            <YardSaleHeader></YardSaleHeader>
-            <Row></Row>
-            <YardSalePost></YardSalePost>
-            <Footer></Footer>
+            <HomeBanner />
+            <YardSaleHeader />
+            <Row />
+            <YardSalePost />
+            <Footer />
           </SuperContainerInner>
-
         </SuperContainer>
 
       </React.Fragment>
