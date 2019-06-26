@@ -22,10 +22,11 @@ class App extends Component {
             <YardSaleHeader />
             <Row />
             <YardSalePost />
+            <YardSalePost />
+            <YardSalePost />
             <Footer />
           </SuperContainerInner>
         </SuperContainer>
-
       </React.Fragment>
     );
 
