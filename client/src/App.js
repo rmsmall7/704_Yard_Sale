@@ -8,7 +8,7 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-      <Menu />
+        <Menu />
       <SuperContainer>
         <Header/>
       </SuperContainer>
