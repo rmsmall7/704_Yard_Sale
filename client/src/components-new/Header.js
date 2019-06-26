@@ -7,7 +7,7 @@ function Header(props) {
       <div className="header_overlay" />
       <div className="header_content d-flex flex-row align-items-center justify-content-start">
         <div className="logo">
-          <a href="#">
+          <a href="/">
             <div className="d-flex flex-row align-items-center justify-content-start">
               <div><img src="images/logo_1.png" alt /></div>
               <div>704 Yard Sale</div>
@@ -17,8 +17,8 @@ function Header(props) {
         <div className="hamburger"><i className="fa fa-bars" aria-hidden="true" /></div>
         <nav className="main_nav">
           <ul className="d-flex flex-row align-items-start justify-content-start">
-            <li className="active"><a href="#">Post Your Sale</a></li>
-            <li><a href="#">Saved</a></li>
+            <li className="active"><a href="/YardPost">Post Your Sale</a></li>
+            <li><a href="/YardSave">Saved</a></li>
             <li><a href="#About">About</a></li>
             <li><a href="#">Placeholder</a></li>
             <li><a href="#">Placeholder</a></li>
