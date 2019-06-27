@@ -14,40 +14,40 @@ const yardSeed = [
     "location": "Noda",
     "StartTime": "06:00 am",
     "EndTime": "4 hours",
-    "picture":"none",
-    "date": "new Date(Date.now())"
+    "date": "6/29/2019",
+    "items": "none"
   },
   {
     "title": "Shelisha's Sale in Hickory",
     "location": "Hickory",
     "StartTime": "06:00 am",
     "EndTime": "3 hours",
-    "picture":"none",
-    "date": "new Date(Date.now())"
+    "date": "6/29/2019",
+    "items": "none"
   },
   {
     "title": "Natasha's Sale in Indian Trail",
     "location": "Indian Trail",
     "StartTime": "06:00 am",
     "EndTime": "1 hour",
-    "picture":"none",
-    "date": "new Date(Date.now())"
+    "date": "6/29/2019",
+    "items": "none"
   },
   {
     "title": "Ismael's Sale in Steele Creek",
     "location": "Steele Creek",
     "StartTime": "10:00 am",
     "EndTime": "4 hours",
-    "picture":"none",
-    "date": "new Date(Date.now())"
+    "date": "6/29/2019",
+    "items": "none"
   },
   {
     "title": "Caleb's Sale in Uptown",
     "location": "Uptown",
     "StartTime": "08:00 am",
     "EndTime": "2 hours",
-    "picture":"none",
-    "date": "new Date(Date.now())"
+    "date": "6/29/2019",
+    "items": "none"
   },
 ];
 
