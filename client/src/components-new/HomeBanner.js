@@ -2,9 +2,9 @@ import React from 'react';
 
 function HomeBanner(props) {
     return (
-        <div classname="home">
+        <div className="home">
             <section id="banner">
-                <div classname="inner">
+                <div className="inner">
                     <h1>704 Yard Sale</h1>
                     <p id="innerText">Welcome to 704 Yard Sale, the fast and convenient way to find local yard sales
         in your area!</p>
