@@ -10,13 +10,14 @@ const db = require('./config/keys').MongoURI;
 // Connect to the Mongo DB
 // mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactyardlist");
 
-
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(routes);
 
 // // Connect to Mongo
 mongoose.connect(db, { useNewUrlParser: true })
 .then(() => console.log('MongoDB Connected'))
 .catch(err => console.log(err));
-
 
 // Start the API server
 app.listen(PORT, function() {

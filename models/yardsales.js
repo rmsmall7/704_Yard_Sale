@@ -1,20 +1,21 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const yardpostedSchema = new Schema({
-  _id: mongoose.Schema.Types.ObjectId,
-
-  tite: {
-    type: String, 
-    required: true
+const yardpostSchema = new Schema({
+  title: {
+    type: String
   },
 
-  time: 
-  { type: String, required: true 
+  location: {
+    type: String
   },
 
-  location: 
-  { type: String, required: true
+  start_time: {
+    type: String
+  },
+
+  end_time: {
+    type: String
   },
 
   items: {
@@ -22,8 +23,7 @@ const yardpostedSchema = new Schema({
   },
 
   date: {
-    type: Date, 
-    default: Date.now
+    type: Date
   },
   
   Picture: {
