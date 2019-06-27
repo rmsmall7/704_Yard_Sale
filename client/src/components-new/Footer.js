@@ -95,8 +95,37 @@ export default class Footer extends Component {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div>Terms and Conditions</div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div>Contact</div>
+                          </a>
+                        </li>
+                      </ul>
                     </div>
+                  </div>
+                  {/* Footer Contact */}
+                  <div className="col-lg-4 footer_col">
+                    <div className="footer_contact">
+                      <div className="footer_social">
+                        <div className="footer_title">Social</div>
+                        <ul className="footer_social_list d-flex flex-row align-items-start justify-content-start">
+                          <li><a href="#"><i className="fa fa-facebook" aria-hidden="true" /></a></li>
+                          <li><a href="#"><i className="fa fa-youtube-play" aria-hidden="true" /></a>
+                          </li>
+                          <li><a href="#"><i className="fa fa-google-plus" aria-hidden="true" /></a>
+                          </li>
+                          <li><a href="#"><i className="fa fa-instagram" aria-hidden="true" /></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
             </footer>
         )
