@@ -10,8 +10,8 @@ export default {
     return axios.get("/api/yardsale/" + id);
   },
 
-  addPost: function(postData) {
-    return axios.post("/api/yardsale", postData);
+  addPost: function(yards) {
+    return axios.post("/api/yardsale", yards);
   },
   // Deletes the book with the given id
   deletePost: function(id) {
