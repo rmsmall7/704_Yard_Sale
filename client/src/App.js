@@ -36,7 +36,7 @@ class App extends Component {
         </React.Fragment> */}
         <div className="container">
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <Link to={'/'} className="navbar-brand">React CRUD Example</Link>
+            <Link to={'/'} className="navbar-brand">704-Yard Sale</Link>
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav mr-auto">
                 <li className="nav-item">
@@ -51,7 +51,7 @@ class App extends Component {
               </ul>
             </div>
           </nav> <br />
-          <h2>Welcome to React CRUD Tutorial</h2> <br />
+          <h2>Welcome to 704 Yard Sale</h2> <br />
           </div>
           <Switch>
             <Route exact path="/" component={HomeNew} />

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import API from "../utils/API";
+import { Link } from "react-router-dom";
 
 
 export default class YardPost extends Component {
@@ -109,7 +110,7 @@ handleFormSubmit = event => {
         .then(res => this.loadYardsales())
         .catch(err => console.log(err));
     }
-    console.log(`this value is ${ this.state.title }`)
+    // console.log(`this value is ${ this.state.title }`)
   };
 
 
