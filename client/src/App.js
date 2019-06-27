@@ -19,7 +19,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-        {/* <React.Fragment>
+        <React.Fragment>
           <Menu />
           <SuperContainer>
             <Header />
@@ -65,6 +65,31 @@ class App extends Component {
     }
     
     export default App;
+
+    // <div className="container">
+    // <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    //   <Link to={'/'} className="navbar-brand">React CRUD Example</Link>
+    //   <div className="collapse navbar-collapse" id="navbarSupportedContent">
+    //     <ul className="navbar-nav mr-auto">
+    //       <li className="nav-item">
+    //         <Link to={'/'} className="nav-link">Home</Link>
+    //       </li>
+    //       <li className="nav-item">
+    //         <Link to={'/YardPost'} className="nav-link">Yard Post</Link>
+    //       </li>
+    //       <li className="nav-item">
+    //         <Link to={'/YardSave'} className="nav-link">Yard Save</Link>
+    //       </li>
+    //     </ul>
+    //   </div>
+    // </nav> <br />
+    // <h2>Welcome to React CRUD Tutorial</h2> <br />
+    // </div>
+    // <Switch>
+    //   <Route exact path="/" component={HomeNew} />
+    //   <Route exact path="/YardPost" component={ YardPost } />
+    //   <Route exact path="/YardSave" component={ YardSave } />
+    // </Switch>
     
     
     
