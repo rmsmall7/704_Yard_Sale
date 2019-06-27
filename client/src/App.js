@@ -1,8 +1,13 @@
 import React, { Component } from "react";
-  import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Menu from './components-new/Menu';
 import SuperContainer from './components-new/SuperContainer';
 import Header from './components-new/Header';
+import YardSaleHeader from './components-new/Header';
+import YardSalePost from './components-new/Header';
+import Footer from './components-new/Header';
+import Login from "./components-new/Login";
+
 
 class App extends Component {
   render() {
