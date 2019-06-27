@@ -1,4 +1,4 @@
-$height:400px;
+/* $height:400px; */
 
 body{
     width:100%;
@@ -18,12 +18,12 @@ body{
     background:#2c3e50;
 }
 
-#signup{
+/* #signup{
     height:$height;
 } 
 #login{
     height:$height / 2;
-}
+} */
 .yellow{
     background-color:gold;
 }
