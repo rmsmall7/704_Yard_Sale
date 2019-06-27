@@ -1,4 +1,4 @@
 module.exports = {
-    Yardsales: require("./yardsales")
+    Yard: require("./yardsales")
   };
   
