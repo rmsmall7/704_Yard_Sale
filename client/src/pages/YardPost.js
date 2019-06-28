@@ -15,89 +15,12 @@ export default class YardPost extends Component {
         items: ''
     }
 
-    // constructor(props) {
-    //     super(props);
-    //     this.handleInputChange = this.handleInputChange.bind(this);
-    //     this.handleFormSubmit = this.handleFormSubmit.bind(this);
-
-        //     this.onChangeTitle = this.onChangeTitle.bind(this);
-        //     this.onChangeLocation = this.onChangeLocation.bind(this);
-        //     this.onChangeStartTime = this.onChangeStartDate.bind(this);
-        //     this.onChangeEndTime = this.onChangeEndDate.bind(this);
-        //     this.onChangeDate = this.onChangeDate.bind(this);
-        //     this.onChangeItems = this.onChangeItems.bind(this);
-        //     this.onSubmit = this.onSubmit.bind(this);
-
-        //     this.state = {
-        //         title: '',
-        //         location: '',
-        //         start_time: '',
-        //         end_time: '',
-        //         date: '',
-        //         items: ''
-        // }
-    // }
-
-    // onChangeTitle(e) {
-    //     this.setState({
-    //         title: e.target.value
-    //     });
-    // }
-
-    // onChangeLocation(e) {
-    //     this.setState({
-    //         location: e.target.value
-    //     });
-    // }
-
-    // onChangeStartTime(e) {
-    //     this.setState({
-    //         start_time: e.target.value
-    //     });
-    // }
-
-    // onChangeEndTime(e) {
-    //     this.setState({
-    //         end_time: e.target.value
-    //     });
-    // }
-
-    // onChangeDate(e) {
-    //     this.setState({
-    //         date: e.target.value
-    //     });
-    // }
-
-    // onChangeItems(e) {
-    //     this.setState({
-    //         items: e.target.value
-    //     });
-    // }
-
     handleInputChange = event => {
         const { name, value } = event.target;
         this.setState({
             [name]: value
         });
     };
-
-    // onSubmit = e => {
-    //     e.preventDefault();
-    //     console.log(`The values are ${this.state.title}, ${this.state.location}, ${this.state.start_time}, ${this.state.end_time}, 
-    //         ${this.state.date}, and ${this.state.items} `);
-    //         if (this.state.title && this.state.location) {
-    //     API.addPost({
-    //         title: this.state.title,
-    //         location: this.state.location,
-    //         start_time: this.state.start_time,
-    //         end_time: this.state.end_time,
-    //         date: this.state.date,
-    //         items: this.state.items
-    //     })
-    //         .then(res => this.loadYardsales())
-    //         .catch(err => console.log(err));
-    // }
-    // }
 
     handleFormSubmit = event => {
         event.preventDefault();
