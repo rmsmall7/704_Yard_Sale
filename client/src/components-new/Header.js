@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Header(props) {
   return (
@@ -7,12 +8,14 @@ function Header(props) {
       <div className="header_overlay" />
       <div className="header_content d-flex flex-row align-items-center justify-content-start">
         <div className="logo">
-          <a href="/">
+          {/* <a href="/"> */}
+          <Link to="/">
             <div className="d-flex flex-row align-items-center justify-content-start">
               <div><img src="images/logo_1.png" alt /></div>
               <div>704 Yard Sale</div>
             </div>
-          </a>
+            </Link>
+          {/* </a> */}
         </div>
         <div className="hamburger"><i className="fa fa-bars" aria-hidden="true" /></div>
         <nav className="main_nav">
