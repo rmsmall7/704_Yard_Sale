@@ -14,17 +14,17 @@ function Header(props) {
               <div><img src="images/logo_1.png" alt /></div>
               <div>704 Yard Sale</div>
             </div>
-            </Link>
+          </Link>
           {/* </a> */}
         </div>
         <div className="hamburger"><i className="fa fa-bars" aria-hidden="true" /></div>
         <nav className="main_nav">
           <ul className="d-flex flex-row align-items-start justify-content-start">
-            <li className="active"><a href="/YardPost">Post Your Sale</a></li>
-            <li><a href="/YardSave">Saved</a></li>
-            <li><a href="#About">About</a></li>
-            <li><a href="#">Placeholder</a></li>
-            <li><a href="#">Placeholder</a></li>
+            <li className="active"><Link to="/YardPost">Post Your Sale</Link></li>
+            <li><Link to="/YardSave">Saved</Link></li>
+            <li><Link to="#About">About</Link></li>
+            <li><Link to="#">Placeholder</Link></li>
+            <li><Link to="#">Placeholder</Link></li>
           </ul>
         </nav>
         <div className="header_right d-flex flex-row align-items-center justify-content-start ml-auto">
@@ -36,11 +36,11 @@ function Header(props) {
             </form>
           </div>
           {/* User */}
-          <div className="user"><a href="#">
+          <div className="user"><Link to="#">
             <div><img src="images/user.svg" alt="https://www.flaticon.com/authors/freepik" />
               <div>1</div>
             </div>
-          </a></div>
+          </Link></div>
         </div>
       </div>
     </header>
