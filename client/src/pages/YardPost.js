@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
 import API from "../utils/API";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 import { Input, TextArea, FormBtn } from "../components/Form";
 import { Col, Row, Container } from "../components/Grid";
 import Jumbotron from "../components/Jumbotron";
 
 
 class YardPost extends Component {
+=======
+import SuperContainerInner from '../components-new/SuperContainerInner'
+
+export default class YardPost extends Component {
+>>>>>>> 1170ef201aa7073c40b62560ae443b29fb097802
 
     state = {
-        yardsale: [],
+        //yardsale: [],
         title: '',
         location: '',
         start_time: '',
@@ -18,6 +24,7 @@ class YardPost extends Component {
         items: ''
     }
 
+<<<<<<< HEAD
     constructor(props) {
         super(props);
         this.state = { value: '' };
@@ -117,6 +124,37 @@ class YardPost extends Component {
     };
 
 
+=======
+    handleInputChange = event => {
+        const { name, value } = event.target;
+        this.setState({
+            [name]: value
+        });
+    };
+
+    handleFormSubmit = event => {
+        event.preventDefault();
+
+        console.log(this.state)
+        if (this.state.title && this.state.location) {
+            API.savePost(this.state)
+                .then(res => this.loadYardsales())
+                .catch(err => console.log(err));
+        }
+        console.log(`this value is ${ this.state.title }`)
+        this.setState({
+            title: '',
+            location: '',
+            start_time: '',
+            end_time: '',
+            date: '',
+            items: ''
+        })
+    };
+
+
+
+>>>>>>> 1170ef201aa7073c40b62560ae443b29fb097802
     loadYardsales = () => {
         API.getPosts()
             .then(res =>
@@ -126,8 +164,12 @@ class YardPost extends Component {
                 })
             )
             .catch(err => console.log(err));
+<<<<<<< HEAD
     };
 
+=======
+    }
+>>>>>>> 1170ef201aa7073c40b62560ae443b29fb097802
     deletePost = id => {
         API.deletePost(id)
             .then(res => this.getPost())
@@ -136,6 +178,7 @@ class YardPost extends Component {
 
     render() {
         return (
+<<<<<<< HEAD
             <Container fluid>
                 <Row>
                     <Col size="md-6">
@@ -172,3 +215,72 @@ class YardPost extends Component {
 
 
 export default YardPost;
+=======
+            <div className="container">
+                <div style={{ marginTop: 100 }}>
+                    <h3>Add New Yard Sale</h3>
+                    <form>
+                        <div className="form-group">
+                            <label>Title: </label>
+                            <input type="text"
+                                className="form-control"
+                                name="title"
+                                value={this.state.title}
+                                onChange={this.handleInputChange} />
+                        </div>
+                        <div className="form-group">
+                            <label>Location: </label>
+                            <input type="text"
+                                className="form-control"
+                                name="location"
+                                value={this.state.location}
+                                onChange={this.handleInputChange} />
+                        </div>
+                        <div className="form-group">
+                            <label>Start Time: </label>
+                            <input type="time"
+                                className="form-control"
+                                name="start_time"
+                                value={this.state.start_time}
+                                onChange={this.handleInputChange} />
+                        </div>
+                        <div className="form-group">
+                            <label>End Time: </label>
+                            <input type="time"
+                                className="form-control"
+                                name="end_time"
+                                value={this.state.end_time}
+                                onChange={this.handleInputChange} />
+                        </div>
+                        <div className="form-group">
+                            <label>Date: </label>
+                            <input type="date"
+                                className="form-control"
+                                name="date"
+                                value={this.state.date}
+                                onChange={this.handleInputChange} />
+                        </div>
+                        <div className="form-group">
+                            <label>Items: </label>
+                            <input type="text"
+                                className="form-control"
+                                name="items"
+                                value={this.state.items}
+                                onChange={this.handleInputChange} />
+                        </div>
+
+                        <div className="form-group">
+                            <input type="submit"
+                                value="Submit Yard Sale"
+                                className="btn btn-primary"
+                                onClick={this.handleFormSubmit} />
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+        )
+    }
+}
+>>>>>>> 1170ef201aa7073c40b62560ae443b29fb097802

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Menu(props) {
     return (
@@ -14,21 +15,20 @@ function Menu(props) {
             {/* Navigation */}
             <div className="menu_nav">
                 <ul>
-                    <li><a href="#">Post Your Sale</a></li>
-                    <li><a href="#">Saved</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Placeholder</a></li>
-                    <li><a href="#">Placeholder</a></li>
+                    <li><Link to="/YardPost">Post Your Sale</Link></li>
+                    <li><Link to="/YardSave">Saved Yard Sales</Link></li>
+                    <li><Link to="/YardSaleList">Find a Yard Sale</Link></li>
+                    <li><Link to="/About">About</Link></li>
                 </ul>
             </div>
             {/* Contact Info */}
             <div className="menu_contact">
                 <div className="menu_social">
                     <ul className="menu_social_list d-flex flex-row align-items-start justify-content-start">
-                        <li><a href="#"><i className="fa fa-facebook" aria-hidden="true" /></a></li>
-                        <li><a href="#"><i className="fa fa-youtube-play" aria-hidden="true" /></a></li>
-                        <li><a href="#"><i className="fa fa-google-plus" aria-hidden="true" /></a></li>
-                        <li><a href="#"><i className="fa fa-instagram" aria-hidden="true" /></a></li>
+                        <li><Link to="#"><i className="fa fa-facebook" aria-hidden="true" /></Link></li>
+                        <li><Link to="#"><i className="fa fa-youtube-play" aria-hidden="true" /></Link></li>
+                        <li><Link to="#"><i className="fa fa-google-plus" aria-hidden="true" /></Link></li>
+                        <li><Link to="#"><i className="fa fa-instagram" aria-hidden="true" /></Link></li>
                     </ul>
                 </div>
             </div>

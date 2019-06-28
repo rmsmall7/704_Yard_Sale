@@ -8,27 +8,27 @@ const yardpostSchema = new Schema({
 
   location: {
     type: String
-  },
-
-  start_time: {
-    type: String
-  },
-
-  end_time: {
-    type: String
-  },
-
-  items: {
-  type: String
-  },
-
-  date: {
-    type: Date
-  },
-  
-  Picture: {
-    type: String
   }
+
+  // start_time: {
+  //   type: String
+  // },
+
+  // end_time: {
+  //   type: String
+  // },
+
+  // items: {
+  // type: String
+  // },
+
+  // date: {
+  //   type: Date
+  // },
+  
+  // Picture: {
+  //   type: String
+  // }
 });
 
 const Yard = mongoose.model("Yard", yardpostSchema);

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class YardSalePost extends Component {
+export default class YardPost extends Component {
     render() {
         return (
             <div className="col-xl-4 col-md-6">
