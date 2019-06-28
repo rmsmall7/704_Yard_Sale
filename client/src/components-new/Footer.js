@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export default class Footer extends Component {
     render() {
@@ -11,12 +12,12 @@ export default class Footer extends Component {
                   <div className="col-lg-4 footer_col">
                     <div className="footer_about">
                       <div className="footer_logo">
-                        <a name="About">
+                        < Link name="About">
                           <div className="d-flex flex-row align-items-center justify-content-start">
-                            <div className="footer_logo_icon"><img src="images/logo_2.png" alt /></div>
+                            <div className="footer_logo_icon"><img src="images/logo_2.png" alt="logo" /></div>
                             <div>704 Yard Sale</div>
                           </div>
-                        </a>
+                        </Link>
                       </div>
                       <div className="footer_about_text">
                         <p> Welcome to 704 Yard Sale, the fast and convenient way to find local yard
@@ -34,20 +35,20 @@ export default class Footer extends Component {
                       <div className="footer_title">Support</div>
                       <ul className="footer_list">
                         <li>
-                          <a href="#">
+                          <Link to="#">
                             <div>Customer Service<div className="footer_tag_1">online now</div>
                             </div>
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">
+                          <Link to="#">
                             <div>Terms and Conditions</div>
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">
+                          <Link to="#">
                             <div>Contact</div>
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </div>
@@ -58,12 +59,12 @@ export default class Footer extends Component {
                       <div className="footer_social">
                         <div className="footer_title">Social</div>
                         <ul className="footer_social_list d-flex flex-row align-items-start justify-content-start">
-                          <li><a href="#"><i className="fa fa-facebook" aria-hidden="true" /></a></li>
-                          <li><a href="#"><i className="fa fa-youtube-play" aria-hidden="true" /></a>
+                          <li><Link to="#"><i className="fa fa-facebook" aria-hidden="true" /></Link></li>
+                          <li><Link to="#"><i className="fa fa-youtube-play" aria-hidden="true" /></Link>
                           </li>
-                          <li><a href="#"><i className="fa fa-google-plus" aria-hidden="true" /></a>
+                          <li><Link to="#"><i className="fa fa-google-plus" aria-hidden="true" /></Link>
                           </li>
-                          <li><a href="#"><i className="fa fa-instagram" aria-hidden="true" /></a></li>
+                          <li><Link to="#"><i className="fa fa-instagram" aria-hidden="true" /></Link></li>
                         </ul>
                       </div>
                     </div>
@@ -81,7 +82,7 @@ export default class Footer extends Component {
                         Copyright ©
                         All rights reserved |
                         Made with <i className="fa fa-heart-o" aria-hidden="true" /> by Resilient Coders |
-                        Powered by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                        Powered by <Link to="https://colorlib.com" target="_blank">Colorlib</Link>
                         {/* Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. */}
                       </div>
                     </div>
