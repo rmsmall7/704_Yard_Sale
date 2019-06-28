@@ -15,11 +15,10 @@ function Menu(props) {
             {/* Navigation */}
             <div className="menu_nav">
                 <ul>
-                    <li><Link to="#">Post Your Sale</Link></li>
-                    <li><Link to="#">Saved</Link></li>
-                    <li><Link to="#">About</Link></li>
-                    <li><Link to="#">Placeholder</Link></li>
-                    <li><Link to="#">Placeholder</Link></li>
+                    <li><Link to="/YardPost">Post Your Sale</Link></li>
+                    <li><Link to="/YardSave">Saved Yard Sales</Link></li>
+                    <li><Link to="/YardSaleList">Find a Yard Sale</Link></li>
+                    <li><Link to="/About">About</Link></li>
                 </ul>
             </div>
             {/* Contact Info */}

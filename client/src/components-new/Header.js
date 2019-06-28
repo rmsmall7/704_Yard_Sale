@@ -8,23 +8,20 @@ function Header(props) {
       <div className="header_overlay" />
       <div className="header_content d-flex flex-row align-items-center justify-content-start">
         <div className="logo">
-          {/* <a href="/"> */}
           <Link to="/">
             <div className="d-flex flex-row align-items-center justify-content-start">
               <div><img src="images/logo_1.png" alt /></div>
               <div>704 Yard Sale</div>
             </div>
           </Link>
-          {/* </a> */}
         </div>
         <div className="hamburger"><i className="fa fa-bars" aria-hidden="true" /></div>
         <nav className="main_nav">
           <ul className="d-flex flex-row align-items-start justify-content-start">
             <li className="active"><Link to="/YardPost">Post Your Sale</Link></li>
-            <li><Link to="/YardSave">Saved</Link></li>
-            <li><Link to="#About">About</Link></li>
-            <li><Link to="#">Placeholder</Link></li>
-            <li><Link to="#">Placeholder</Link></li>
+            <li><Link to="/YardSave">Saved Yard Sales</Link></li>
+            <li><Link to="/YardSaleList">Find a Yard Sale</Link></li>
+            <li><Link to="/About">About</Link></li>
           </ul>
         </nav>
         <div className="header_right d-flex flex-row align-items-center justify-content-start ml-auto">
