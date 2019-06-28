@@ -18,6 +18,7 @@ module.exports = {
   },
   create: function(req, res) {
     console.log(req.body);
+    console.log("Controller")
     
     db.Yard
       .create(req.body)

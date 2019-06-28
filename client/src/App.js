@@ -9,6 +9,10 @@ import YardSave from './pages/YardSave';
 
 
 class App extends Component {
+  state = {
+    isLoggedIn: true
+  }
+  
   render() {
     return (
       <Router>

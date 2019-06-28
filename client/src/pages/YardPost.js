@@ -6,7 +6,7 @@ import SuperContainerInner from '../components-new/SuperContainerInner'
 export default class YardPost extends Component {
 
     state = {
-        yardsale: [],
+        //yardsale: [],
         title: '',
         location: '',
         start_time: '',
@@ -15,11 +15,10 @@ export default class YardPost extends Component {
         items: ''
     }
 
-    constructor(props) {
-        super(props);
-        this.state = { value: '' };
-        this.handleInputChange = this.handleInputChange.bind(this);
-        this.handleFormSubmit = this.handleFormSubmit.bind(this);
+    // constructor(props) {
+    //     super(props);
+    //     this.handleInputChange = this.handleInputChange.bind(this);
+    //     this.handleFormSubmit = this.handleFormSubmit.bind(this);
 
         //     this.onChangeTitle = this.onChangeTitle.bind(this);
         //     this.onChangeLocation = this.onChangeLocation.bind(this);
@@ -37,7 +36,7 @@ export default class YardPost extends Component {
         //         date: '',
         //         items: ''
         // }
-    }
+    // }
 
     // onChangeTitle(e) {
     //     this.setState({
@@ -102,15 +101,22 @@ export default class YardPost extends Component {
 
     handleFormSubmit = event => {
         event.preventDefault();
+
+        console.log(this.state)
         if (this.state.title && this.state.location) {
-            API.savePost({
-                title: this.state.title,
-                location: this.state.location
-            })
+            API.savePost(this.state)
                 .then(res => this.loadYardsales())
                 .catch(err => console.log(err));
         }
-        // console.log(`this value is ${ this.state.title }`)
+        console.log(`this value is ${ this.state.title }`)
+        this.setState({
+            title: '',
+            location: '',
+            start_time: '',
+            end_time: '',
+            date: '',
+            items: ''
+        })
     };
 
 
@@ -125,7 +131,6 @@ export default class YardPost extends Component {
             )
             .catch(err => console.log(err));
     }
-
     deletePost = id => {
         API.deletePost(id)
             .then(res => this.getPost())
@@ -142,6 +147,7 @@ export default class YardPost extends Component {
                             <label>Title: </label>
                             <input type="text"
                                 className="form-control"
+                                name="title"
                                 value={this.state.title}
                                 onChange={this.handleInputChange} />
                         </div>
@@ -149,6 +155,7 @@ export default class YardPost extends Component {
                             <label>Location: </label>
                             <input type="text"
                                 className="form-control"
+                                name="location"
                                 value={this.state.location}
                                 onChange={this.handleInputChange} />
                         </div>
@@ -156,6 +163,7 @@ export default class YardPost extends Component {
                             <label>Start Time: </label>
                             <input type="time"
                                 className="form-control"
+                                name="start_time"
                                 value={this.state.start_time}
                                 onChange={this.handleInputChange} />
                         </div>
@@ -163,6 +171,7 @@ export default class YardPost extends Component {
                             <label>End Time: </label>
                             <input type="time"
                                 className="form-control"
+                                name="end_time"
                                 value={this.state.end_time}
                                 onChange={this.handleInputChange} />
                         </div>
@@ -170,6 +179,7 @@ export default class YardPost extends Component {
                             <label>Date: </label>
                             <input type="date"
                                 className="form-control"
+                                name="date"
                                 value={this.state.date}
                                 onChange={this.handleInputChange} />
                         </div>
@@ -177,6 +187,7 @@ export default class YardPost extends Component {
                             <label>Items: </label>
                             <input type="text"
                                 className="form-control"
+                                name="items"
                                 value={this.state.items}
                                 onChange={this.handleInputChange} />
                         </div>
