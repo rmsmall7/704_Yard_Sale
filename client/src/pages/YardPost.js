@@ -1,76 +1,116 @@
 import React, { Component } from 'react';
+import API from "../utils/API";
 
 
 export default class YardPost extends Component {
-    constructor(props) {
-        super(props);
-        this.onChangeTitle = this.onChangeTitle.bind(this);
-        this.onChangeLocation = this.onChangeLocation.bind(this);
-        this.onChangeStartTime = this.onChangeStartDate.bind(this);
-        this.onChangeEndTime = this.onChangeEndDate.bind(this);
-        this.onChangeDate = this.onChangeDate.bind(this);
-        this.onChangeItems = this.onChangeItems.bind(this);
-        this.onSubmit = this.onSubmit.bind(this);
+    
+    state = {
+        yardsale: [],
+        title: '',
+        location: '',
+        start_time: '',
+        end_time: '',
+        date: '',
+        items: ''
+        }
+    
+    // constructor(props) {
+    //     super(props);
+    //     this.onChangeTitle = this.onChangeTitle.bind(this);
+    //     this.onChangeLocation = this.onChangeLocation.bind(this);
+    //     this.onChangeStartTime = this.onChangeStartDate.bind(this);
+    //     this.onChangeEndTime = this.onChangeEndDate.bind(this);
+    //     this.onChangeDate = this.onChangeDate.bind(this);
+    //     this.onChangeItems = this.onChangeItems.bind(this);
+    //     this.onSubmit = this.onSubmit.bind(this);
 
-        this.state = {
-            Title: '',
-            Location: '',
-            Start_Time: '',
-            End_Time: '',
-            Date: '',
-            Items: ''
+    //     this.state = {
+    //         title: '',
+    //         location: '',
+    //         start_time: '',
+    //         end_time: '',
+    //         date: '',
+    //         items: ''
+        // }
+    // }
+
+    // onChangeTitle(e) {
+    //     this.setState({
+    //         title: e.target.value
+    //     });
+    // }
+
+    // onChangeLocation(e) {
+    //     this.setState({
+    //         location: e.target.value
+    //     });
+    // }
+
+    // onChangeStartTime(e) {
+    //     this.setState({
+    //         start_time: e.target.value
+    //     });
+    // }
+
+    // onChangeEndTime(e) {
+    //     this.setState({
+    //         end_time: e.target.value
+    //     });
+    // }
+
+    // onChangeDate(e) {
+    //     this.setState({
+    //         date: e.target.value
+    //     });
+    // }
+
+    // onChangeItems(e) {
+    //     this.setState({
+    //         items: e.target.value
+    //     });
+    // }
+
+    handleInputChange = event => {
+        const { name, value } = event.target;
+        this.setState({
+            [name]: value
+        });
+    };
+
+    onSubmit = e => {
+        e.preventDefault();
+        console.log(`The values are ${this.state.title}, ${this.state.location}, ${this.state.start_time}, ${this.state.end_time}, 
+        ${this.state.date}, and ${this.state.items} `);
+        if (this.state.title && this.state.location) {
+
+            API.addPost({
+                title: this.state.title,
+                location: this.state.location,
+                start_time: this.state.start_time,
+                end_time: this.state.end_time,
+                date: this.state.date,
+                items: this.state.items
+              })
+                .then(res => this.loadYardsales())
+                .catch(err => console.log(err));
         }
     }
 
-    onChangeTitle(e) {
-        this.setState({
-            Title: e.target.value
-        });
+
+    loadYardsales = () => {
+        API.getPosts()
+        .then(res => 
+            this.setState({ yardsale: res.data, title: '', location: '', start_time: '', end_time: '',
+        date: '', items: '' })
+        )
+        .catch(err => console.log(err));
     }
 
-    onChangeLocation(e) {
-        this.setState({
-            Location: e.target.value
-        });
-    }
-
-    onChangeStartTime(e) {
-        this.setState({
-            Start_Time: e.target.value
-        });
-    }
-
-    onChangeEndTime(e) {
-        this.setState({
-            End_Time: e.target.value
-        });
-    }
-
-    onChangeDate(e) {
-        this.setState({
-            Date: e.target.value
-        });
-    }
-
-    onChangeItems(e) {
-        this.setState({
-            Items: e.target.value
-        });
-    }
-
-    onSubmit(e) {
-        e.preventDefault();
-        console.log(`The values are ${this.state.Title}, ${this.state.Location}, ${this.state.Start_Time}, ${this.state.End_Time}, 
-        ${this.state.Date}, and ${this.state.Items} `);
-        this.setState({
-            Title: '',
-            Location: '',
-            Start_Time: '',
-            End_Time: '',
-            Date: '',
-            Items: ''
-        })
-    }
+    deletePost = id => {
+        API.deletePost(id)
+          .then(res => this.getPost())
+          .catch(err => console.log(err));
+      };
 
   render() {
     return (
@@ -92,47 +132,50 @@ export default class YardPost extends Component {
               <label>Title: </label>
               <input type="text" 
               className="form-control"
-              value={this.state.Title}
-              onChange={this.onChangeTitle}/>
+              value={this.state.title}
+              onChange={this.handleInputChange}/>
           </div>
           <div className="form-group">
               <label>Location: </label>
               <input type="text" 
               className="form-control"
-              value={this.state.Location}
-              onChange={this.onChangeLocation}/>
+              value={this.state.location}
+              onChange={this.handleInputChange}/>
           </div>
           <div className="form-group">
               <label>Start Time: </label>
               <input type="time" 
               className="form-control"
-              value={this.state.Start_Time}
-              onChange={this.onChangeStartTime}/>
+              value={this.state.start_time}
+              onChange={this.handleInputChange}/>
           </div>
           <div className="form-group">
               <label>End Time: </label>
               <input type="time" 
               className="form-control"
-              value={this.state.End_Time}
-              onChange={this.onChangeEndTime}/>
+              value={this.state.end_time}
+              onChange={this.handleInputChange}/>
           </div>
           <div className="form-group">
               <label>Date: </label>
               <input type="date" 
               className="form-control"
-              value={this.state.Date}
-              onChange={this.onChangeDate}/>
+              value={this.state.date}
+              onChange={this.handleInputChange}/>
           </div>
           <div className="form-group">
               <label>Items: </label>
               <input type="text" 
               className="form-control"
-              value={this.state.Items}
-              onChange={this.onChangeItems}/>
+              value={this.state.items}
+              onChange={this.handleInputChange}/>
           </div>
 
           <div className="form-group">
-              <input type="submit" value="Submit Yard Sale" className="btn btn-primary"/>
+              <input type="submit" 
+              value="Submit Yard Sale" 
+              className="btn btn-primary"
+              onClick={this.onSubmit}/>
           </div>
       </form>
   </div>

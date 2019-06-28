@@ -1,40 +1,38 @@
 const router = require("express").Router();
 const yardController = require("../../controllers/yardsales");
-const Yard = require('../../models/yardsales');
-const mongoose = require('mongoose');
 
 // Matches with "/api/yard"
 router.route("/")
   .get(yardController.findAll)
-  // .post(yardController.create);
+  .post(yardController.create);
 
-  router.post('/yardsale', (req, res, next) => {
-    // const yard = {
-    //   title: req.body.title,
-    //   name: req.body.name,
-    //   location: req.body.location,
-    //   startTime: req.body.startTime,
-    //   endTime: req.body.endTime,
-    //   picture: req.body.picture,
-    // };
-    const yard = new Yard ({
-      _id: new mongoose.Types.ObjectId(),
-      title: req.body.title,
-      name: req.body.name,
-      location: req.body.location,
-      startTime: req.body.startTime,
-      endTime: req.body.endTime,
-      picture: req.body.picture,
-    });
-    product.save().then(result => {
-      console.log(result);
-    })
-    .catch(err => console.log(err));
-    res.status(201).json({
-      message: "handling POST request to /yard",
-      createYard: yard
-    });
-  });
+  // router.post('/yardsale', (req, res, next) => {
+  //   // const yard = {
+  //   //   title: req.body.title,
+  //   //   name: req.body.name,
+  //   //   location: req.body.location,
+  //   //   startTime: req.body.startTime,
+  //   //   endTime: req.body.endTime,
+  //   //   picture: req.body.picture,
+  //   // };
+  //   const yard = new Yard ({
+  //     _id: new mongoose.Types.ObjectId(),
+  //     title: req.body.title,
+  //     name: req.body.name,
+  //     location: req.body.location,
+  //     startTime: req.body.startTime,
+  //     endTime: req.body.endTime,
+  //     picture: req.body.picture,
+  //   });
+  //   product.save().then(result => {
+  //     console.log(result);
+  //   })
+  //   .catch(err => console.log(err));
+  //   res.status(201).json({
+  //     message: "handling POST request to /yard",
+  //     createYard: yard
+  //   });
+  // });
 
 // Matches with "/api/yard/:id"
 router

@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const yardpostedSchema = new Schema({
+const yardpostSchema = new Schema({
   _id: mongoose.Schema.Types.ObjectId,
 
   tite: {
@@ -9,7 +9,11 @@ const yardpostedSchema = new Schema({
     required: true
   },
 
-  time: 
+  start_time: 
+  { type: String, required: true 
+  },
+
+  end_time: 
   { type: String, required: true 
   },
 
@@ -23,7 +27,7 @@ const yardpostedSchema = new Schema({
 
   date: {
     type: Date, 
-    default: Date.now
+    
   },
   
   Picture: {
