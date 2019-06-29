@@ -32,12 +32,6 @@ function Header(props) {
               <button className="header_search_button"><img src="images/search.png" /></button>
             </form>
           </div>
-          {/* User */}
-          <div className="user"><Link to="#">
-            <div><img src="images/user.svg" alt="https://www.flaticon.com/authors/freepik" />
-              <div>1</div>
-            </div>
-          </Link></div>
         </div>
       </div>
     </header>
@@ -48,3 +42,4 @@ function Header(props) {
 }
 
 export default Header;
+

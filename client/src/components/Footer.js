@@ -13,12 +13,12 @@ export default class Footer extends Component {
                   <div className="col-lg-4 footer_col">
                     <div className="footer_about">
                       <div className="footer_logo">
-                        < Link name="About">
+                        {/* < Link name="About">
                           <div className="d-flex flex-row align-items-center justify-content-start">
                             <div className="footer_logo_icon"><img src="images/logo_2.png" alt="logo" /></div>
                             <div>704 Yard Sale</div>
                           </div>
-                        </Link>
+                        </Link> */}
                       </div>
                       <div className="footer_about_text">
                         <p> Welcome to 704 Yard Sale, the fast and convenient way to find local yard
