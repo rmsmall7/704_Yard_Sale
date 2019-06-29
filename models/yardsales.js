@@ -8,26 +8,27 @@ const yardpostSchema = new Schema({
 
   location: {
     type: String
+  },
+
+  start_time: {
+    type: String
+  },
+
+  end_time: {
+    type: String
+  },
+
+  items: {
+  type: String
+  },
+
+  date: {
+    type: Date
   }
-
-  // start_time: {
-  //   type: String
-  // },
-
-  // end_time: {
-  //   type: String
-  // },
-
-  // items: {
-  // type: String
-  // },
-
-  // date: {
-  //   type: Date
-  // },
   
-  // Picture: {
-  //   type: String
+  // saved: {
+  //   type: Boolean,
+  //   default: "false"
   // }
 });
 

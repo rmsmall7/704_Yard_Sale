@@ -1,14 +1,9 @@
 const express = require("express");
-
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 8080;
-
-
 const db = require('./config/keys').MongoURI;
-// Connect to the Mongo DB
-// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactyardlist");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
