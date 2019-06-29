@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Link } from "react-router-dom";
 export default class YardSalePost extends Component {
     render() {
         return (
@@ -9,7 +9,7 @@ export default class YardSalePost extends Component {
                         <div className="product_info d-flex flex-row align-items-start justify-content-start">
                             <div>
                                 <div>
-                                    <div className="product_name"><a href="#">Moving Sale!</a></div>
+                                    <div className="product_name"><Link>Moving Sale!</Link></div>
                                 </div>
                             </div>
                         </div>
@@ -24,7 +24,7 @@ export default class YardSalePost extends Component {
                             <div className="text-right d-flex flex-row align-items-start justify-content-start">
                                 <div className="product_button product_fav text-center d-flex flex-column align-items-center justify-content-center">
                                     <div>
-                                        <div><img src="images/heart_2.svg" className="svg" alt />
+                                        <div><img src="images/heart_2.svg" className="svg" alt="heart" />
                                             <div>+</div>
                                         </div>
                                     </div>
