@@ -8,7 +8,7 @@
     "start:prod": "node server.js",
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start",
-    "build": "cd client/ && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+    "build": "cd client && npm run build"
   },
   "repository": {
     "type": "git",
@@ -31,7 +31,6 @@
     "mongoose": "^5.6.0",
     "nodemon": "^1.19.1",
     "path": "^0.12.7",
-    "react-router-dom": "^5.0.1",
-    "react-scripts": "^3.0.1"
+    "react-router-dom": "^5.0.1"
   }
 }
