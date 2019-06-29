@@ -19,8 +19,8 @@ function Header(props) {
         <nav className="main_nav">
           <ul className="d-flex flex-row align-items-start justify-content-start">
             <li className="active"><Link to="/YardPost">Post Your Sale</Link></li>
-            <li><Link to="/YardSave">Saved Yard Sales</Link></li>
             <li><Link to="/YardSaleList">Find a Yard Sale</Link></li>
+            <li><Link to="/YardSave">Saved Yard Sales</Link></li>
             <li><Link to="/About">About</Link></li>
           </ul>
         </nav>

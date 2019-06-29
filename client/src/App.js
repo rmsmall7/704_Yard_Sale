@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Menu from './components-new/Menu';
-import Header from './components-new/Header';
+import Menu from './components/Menu';
+import Header from './components/Header';
 import HomeNew from './pages/HomeNew';
 import YardPost from './pages/YardPost';
 import YardSave from './pages/YardSave';
+import YardSaleList from './pages/YardSaleList';
 
 
 
@@ -23,6 +24,7 @@ class App extends Component {
             <Route exact path="/" component={HomeNew} />
             <Route exact path="/YardPost" component={YardPost} />
             <Route exact path="/YardSave" component={YardSave} />
+            <Route exact path="/YardSaleList" component={YardSaleList} />
           </Switch>
         </div>
       </Router>
