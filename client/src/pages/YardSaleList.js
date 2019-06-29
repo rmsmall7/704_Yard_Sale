@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import API from "../utils/API"
-import FooterBottom from '../components/FooterBottom'
+// import FooterBottom from '../components/FooterBottom'
 
 
 export default class YardSaleList extends Component {

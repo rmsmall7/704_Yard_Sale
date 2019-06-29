@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import API from "../utils/API";
-import { Link } from "react-router-dom";
-import SuperContainerInner from '../components/SuperContainerInner'
+// import { Link } from "react-router-dom";
+// import SuperContainerInner from '../components/SuperContainerInner'
 
 export default class YardPost extends Component {
 
