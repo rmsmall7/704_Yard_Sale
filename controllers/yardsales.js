@@ -1,8 +1,9 @@
-const db = require("../backend/models");
+const db = require("../models");
 
 // Defining methods for the booksController
 module.exports = {
   findAll: function(req, res) {
+    console.log('adlito was here')
     db.Yard
       .find(req.query)
       .sort({ date: -1 })

@@ -6,7 +6,7 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 
 
-const db = require('../config/keys').MongoURI;
+const db = require('./config/keys').MongoURI;
 // Connect to the Mongo DB
 // mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactyardlist");
 

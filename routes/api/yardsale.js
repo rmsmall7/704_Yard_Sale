@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const yardController = require("../../../controllers/yardsales");
+const yardController = require("../../controllers/yardsales");
 const Yard = require('../../models/yardsales');
 const mongoose = require('mongoose');
 
