@@ -3,38 +3,13 @@ import API from "../utils/API"
 
 
 export default class YardSave extends Component {
-  // state = {
-  //   yardSales: []
-  // }
-
-  // componentDidMount(){
-  //   this.getYardSales()
-  // }
-
-  // getYardSales = () => {
-  //   API.getPosts()
-  //     .then(dbData => {
-  //       this.setState({
-  //         yardSales: dbData.data
-  //       }, ()=>console.log(this.state.yardSales))
-  //     })
-  //     .catch(err => console.log(err))
-  // }
-
-  // render() {
-  //   return (
-
-  //     <div className="container">
-  //       <div style={{ marginTop: 100 }}>
-
-  //         {
-  //           this.state.yardSales.map((yardSale, i) => {
-  //             return <p key={i + "-paragraph"}>{yardSale.location}</p>
-  //           })
-  //         }
-
-  //       </div>
-  //     </div>
-  //   )
-  // }
-}
+  render() {
+    return (
+      <div className="container">
+        <div style={{ marginTop: 100 }}>
+          <h3>View your Yardsale posts here</h3>
+      </div>
+        </div>
+    );
+      }
+    }        

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import API from "../utils/API"
+import FooterBottom from '../components/FooterBottom'
 
 
 export default class YardSaleList extends Component {
@@ -34,7 +35,9 @@ export default class YardSaleList extends Component {
           }
 
         </div>
+       
       </div>
+      
     )
   }
 }
