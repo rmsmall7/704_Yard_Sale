@@ -3,8 +3,6 @@ import SuperContainer from '../components/SuperContainer';
 import SuperContainerInner from '../components/SuperContainerInner';
 import HomeBanner from '../components/HomeBanner';
 import YardSaleHeader from '../components/YardSaleHeader';
-import Row from '../components/Row';
-import YardSalePost from '../components/YardSalePost';
 import Footer from '../components/Footer'
 
 export default class HomeNew extends Component {
@@ -14,10 +12,6 @@ export default class HomeNew extends Component {
         <SuperContainerInner>
           <HomeBanner />
           <YardSaleHeader />
-          {/* <Row />
-          <YardSalePost />
-          <YardSalePost />
-          <YardSalePost /> */}
           <Footer />
         </SuperContainerInner>
       </SuperContainer>
