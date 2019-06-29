@@ -12,10 +12,6 @@ export default class HomeNew extends Component {
         <SuperContainerInner>
           <HomeBanner />
           <YardSaleHeader />
-          {/* <Row />
-          <YardSalePost />
-          <YardSalePost />
-          <YardSalePost /> */}
           <Footer />
         </SuperContainerInner>
       </SuperContainer>
