@@ -16,8 +16,8 @@ function Menu(props) {
             <div className="menu_nav">
                 <ul>
                     <li><Link to="/YardPost">Post Your Sale</Link></li>
-                    <li><Link to="/YardSave">Saved Yard Sales</Link></li>
                     <li><Link to="/YardSaleList">Find a Yard Sale</Link></li>
+                    <li><Link to="/YardSave">Saved Yard Sales</Link></li>
                     <li><Link to="/About">About</Link></li>
                 </ul>
             </div>
