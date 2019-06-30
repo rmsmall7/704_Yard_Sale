@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter}from 'react-router-dom';
-import 'spectre.css/dist/spectre.min.css';
-import 'spectre.css/dist/spectre-icons.css';
+// import 'spectre.css/dist/spectre.min.css';
+// import 'spectre.css/dist/spectre-icons.css';
 //import './index.css';
 
 

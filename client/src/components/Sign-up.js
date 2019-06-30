@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import 'spectre.css/dist/spectre.min.css';
+import 'spectre.css/dist/spectre-icons.css';
+
 class Signup extends Component {
     constructor() {
         super()
