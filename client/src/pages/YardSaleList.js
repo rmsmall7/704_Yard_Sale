@@ -31,7 +31,7 @@ export default class YardSaleList extends Component {
           {
             this.state.yardSales.map((yardSale, i) => {
               return (
-                <div className="card" style={{  width: "18rem"}}>
+                <div className="card mx-2 mb-3" style={{  width: "80rem"}}>
                   <div className="card-header">
                     <p key={i + "-paragraph"}>{yardSale.title}</p>
                   </div>
