@@ -2,6 +2,8 @@ const express = require("express");
 const morgan = require('morgan')
 const mongoose = require("mongoose");
 const routes = require("./routes");
+const user = require("./models/user");
+const passport = require('./passport')
 const app = express();
 const PORT = process.env.PORT || 8080;
 
@@ -14,6 +16,16 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(routes);
 app.use(morgan);
+app.use("/user", user);
+// Sessions
+app.use(
+	session({
+		secret: 'squirrel', //pick a random string to make the hash that is generated secure
+		
+	})
+)
+
+
 
 // Connect to Mongo
 mongoose.connect(db, { useNewUrlParser: true })
