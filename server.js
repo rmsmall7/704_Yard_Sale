@@ -3,7 +3,8 @@ const morgan = require('morgan')
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const user = require("./models/user");
-const passport = require('./passport')
+const passport = require('./passport');
+const dbconnection = require('./config/connection');
 const app = express();
 const PORT = process.env.PORT || 8080;
 
@@ -21,7 +22,7 @@ app.use("/user", user);
 app.use(
 	session({
 		secret: 'squirrel', //pick a random string to make the hash that is generated secure
-		
+	store: new MongoStore({ mongoose: dbconnection}),
 	})
 )
 app.use( (req, res, next) => {
