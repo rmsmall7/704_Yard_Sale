@@ -5,6 +5,7 @@ const morgan = require('morgan')
 const routes = require("./routes");
 const session = require('express-session')
 const user = require("./models/user");
+const passport = require('./passport');
 const app = express();
 const PORT = process.env.PORT || 8080;
 
@@ -27,6 +28,10 @@ app.use( (req, res, next) => {
   console.log('req.session', req.session);
   return next();
 });
+
+app.use(passport.initialize())
+app.use(passport.session()) // calls serializeUser and deserializeUser
+
 // Connect to Mongo
 mongoose.connect(db, { useNewUrlParser: true })
 .then(() => console.log('MongoDB Connected'))
