@@ -34,11 +34,19 @@ function Header(props) {
             </form>
           </div>
           {/* User */}
+<<<<<<< HEAD
          <div className="user"><Link to="/Login">
            <div><img src="images/user.svg" alt="https://www.flaticon.com/authors/freepik" />
              <div>1</div>
            </div>
          </Link></div>
+=======
+          <div className="user"><Link to="/Login">
+            <div><img src="images/user.svg" alt="https://www.flaticon.com/authors/freepik" />
+              <div>1</div>
+            </div>
+          </Link></div>
+>>>>>>> 12ad0208776470c0d7b8ac3d1fb2fe174facdf69
         </div>
       </div>
     </header>
