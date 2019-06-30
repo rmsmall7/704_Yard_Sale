@@ -3,7 +3,7 @@ import axios from 'axios'
 import { Route, Link } from 'react-router-dom'
 // components
 // import Signup from './components/sign-up'
-// import LoginForm from './components/login-form'
+import LoginForm from '../components/LoginForm'
 // import Navbar from './components/navbar'
 // import Home from './components/home'
 class Login extends Component {
@@ -12,6 +12,7 @@ class Login extends Component {
             <div className="container">
                 <div style={{ marginTop: 100 }}></div>
                 <p>Hello I am the login page!</p>
+                <LoginForm />
             </div>
         )
     }
