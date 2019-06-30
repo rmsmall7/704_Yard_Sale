@@ -38,7 +38,7 @@ export default class YardSaleList extends Component {
                   <ul className="list-group list-group-flush">
                     <li className="list-group-item" key={i + "-location"}>Location: {yardSale.location}</li>
                     <li className="list-group-item" key={i + "-start_time"}>Start Time: {yardSale.start_time}</li>
-                    <li className="list-group-item" key={i + "-end_time"}>End Time: {yardSale.end_time}</li>
+                    <li className="list-group-item" key={i + "-end_time"}>Duration: {yardSale.end_time}</li>
                     <li className="list-group-item" key={i + "-date"}>Date: {yardSale.date}</li>
                     <li className="list-group-item" key={i + "-items"}>Items for Sale: {yardSale.items}</li>
                   </ul>
