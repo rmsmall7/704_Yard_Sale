@@ -23,7 +23,15 @@ const yardpostSchema = new Schema({
   },
 
   date: {
+<<<<<<< HEAD
     type: Date
+=======
+    type: String
+  },
+  
+  Picture: {
+    type: String
+>>>>>>> 2da9a1a044f889a813285ce6d1dfa1de94df1a0e
   }
   
   // saved: {
