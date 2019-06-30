@@ -3,7 +3,7 @@ import axios from 'axios'
 import { Route, Link } from 'react-router-dom'
 // components
 // import Signup from './components/Sign-up'
-//import LoginForm from './components/login-form'
+import LoginForm from '../components/LoginForm'
 // import Navbar from './components/navbar'
 //import Home from './components/home'
 
@@ -13,6 +13,7 @@ render(){
         <div className="container">
             <div style={{marginTop: 100}}></div>
             <p>Hello y'all</p>
+            <LoginForm />
         </div>
     )
 }
