@@ -29,6 +29,8 @@ app.use( (req, res, next) => {
   return next();
 });
 
+app.use(passport.initialize())
+app.use(passport.session()) // calls serializeUser and deserializeUser
 
 // Connect to Mongo
 mongoose.connect(db, { useNewUrlParser: true })
