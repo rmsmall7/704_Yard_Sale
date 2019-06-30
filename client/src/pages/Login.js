@@ -12,7 +12,7 @@ render(){
     return(
         <div className="container">
             <div style={{marginTop: 100}}></div>
-            <p>Hello y'all</p>
+          
             <LoginForm />
         </div>
     )
