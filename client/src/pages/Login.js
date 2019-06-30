@@ -11,7 +11,6 @@ class Login extends Component {
         return (
             <div className="container">
                 <div style={{ marginTop: 100 }}></div>
-                <p>Hello I am the login page!</p>
                 <LoginForm />
             </div>
         )
