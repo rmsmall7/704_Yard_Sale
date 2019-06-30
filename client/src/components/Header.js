@@ -33,7 +33,7 @@ function Header(props) {
             </form>
           </div>
           {/* User */}
-          <div className="user"><Link to="#">
+          <div className="user"><Link to="/Login">
             <div><img src="images/user.svg" alt="https://www.flaticon.com/authors/freepik" />
               <div>1</div>
             </div>
