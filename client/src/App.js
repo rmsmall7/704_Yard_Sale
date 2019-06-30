@@ -6,6 +6,7 @@ import HomeNew from './pages/HomeNew';
 import YardPost from './pages/YardPost';
 import YardSave from "./pages/YardSave";
 import YardSaleList from './pages/YardSaleList';
+import Login from './pages/Login';
 
 
 
@@ -25,6 +26,7 @@ class App extends Component {
             <Route exact path="/YardPost" component={YardPost} />
             <Route exact path="/YardSave" component={YardSave} />
             <Route exact path="/YardSaleList" component={YardSaleList} />
+            <Route exact path="/Login" component={Login} />
           </Switch>
         </div>
       </Router>
