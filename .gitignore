@@ -10,7 +10,6 @@ client/package-lock.json
 # testing
 /coverage
 config
-
 # production
 /build
 
