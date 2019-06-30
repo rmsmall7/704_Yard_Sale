@@ -29,6 +29,11 @@ const yardpostSchema = new Schema({
   Picture: {
     type: String
   }
+  
+  // saved: {
+  //   type: Boolean,
+  //   default: "false"
+  // }
 });
 
 const Yard = mongoose.model("Yard", yardpostSchema);

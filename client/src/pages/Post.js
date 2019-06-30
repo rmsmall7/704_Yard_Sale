@@ -46,8 +46,8 @@ class Post extends Component {
     if (this.state.time && this.state.date && this.state.location) {
       API.addPost({
         time: this.state.time,
-        date: this.state.date,
         location: this.state.location,
+        date: this.state.date,
         items: this.state.items
       })
         .then(res => this.getPost())
