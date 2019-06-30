@@ -1,5 +1,5 @@
 const express = require("express");
-const morgan = require('morgan')
+const morgan = require("morgan");
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const user = require("./models/user");
@@ -7,37 +7,55 @@ const passport = require('./passport');
 const dbconnection = require('./config/connection');
 const MongoStore = require('connect-mongo')(session);
 const app = express();
+const bodyParser = require('body-parser');
+const user = require('./models/user');
+const session = require('express-session');
+const dbConnection = require('./models/connection');
+const MongoStore = require('connect-mongo')(session)
+const passport = require('./passport');
 const PORT = process.env.PORT || 8080;
 
 
-const db = require('./config/keys').MongoURI;
+
 // Connect to the Mongo DB
 // mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactyardlist");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(routes);
-app.use(morgan);
-app.use("/user", user);
+
+// MIDDLEWARE
+app.use(morgan('dev'))
+app.use(
+	bodyParser.urlencoded({
+		extended: false
+	})
+)
+app.use(bodyParser.json())
+
+// Connect to Mongo
+// mongoose.connect(db, { useNewUrlParser: true })
+// .then(() => console.log('MongoDB Connected'))
+// .catch(err => console.log(err));
+
 // Sessions
 app.use(
 	session({
 		secret: 'squirrel', //pick a random string to make the hash that is generated secure
-	store: new MongoStore({ mongoose: dbconnection}),
+		store: new MongoStore({ mongooseConnection: dbConnection}),
+		resave: false,
+		saveUninitialized: false
 	})
 )
-app.use( (req, res, next) => {
-  console.log('req.session', req.session);
-  return next();
-});
 
+// Passport
 app.use(passport.initialize())
-app.use(passport.session()) // calls serializeUser and deserializeUser
+app.use(passport.session()) // calls the deserializeUser
 
-// Connect to Mongo
-mongoose.connect(db, { useNewUrlParser: true })
-.then(() => console.log('MongoDB Connected'))
-.catch(err => console.log(err));
+
+
+// Routes
+app.use(routes);
+app.use('/user', user)
 
 // Start the API server
 app.listen(PORT, function() {
