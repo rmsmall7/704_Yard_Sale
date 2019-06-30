@@ -25,10 +25,10 @@ function Menu(props) {
             <div className="menu_contact">
                 <div className="menu_social">
                     <ul className="menu_social_list d-flex flex-row align-items-start justify-content-start">
-                        <li><a href="http://www.facebook.com"><i className="fa fa-facebook" aria-hidden="true" /></a></li>
-                        <li><a href="http://www.youtube.com"><i className="fa fa-youtube-play" aria-hidden="true" /></a></li>
-                        <li><a href="http://www.google.com"><i className="fa fa-google-plus" aria-hidden="true" /></a></li>
-                        <li><a href="http://www.instagram.com"><i className="fa fa-instagram" aria-hidden="true" /></a></li>
+                        <li><Link to='#'><i className="fa fa-facebook" aria-hidden="true" /></Link></li>
+                        <li><Link to='#'><i className="fa fa-youtube-play" aria-hidden="true" /></Link></li>
+                        <li><Link to='#'><i className="fa fa-google-plus" aria-hidden="true" /></Link></li>
+                        <li><Link to='#'><i className="fa fa-instagram" aria-hidden="true" /></Link></li>
                     </ul>
                 </div>
             </div>
