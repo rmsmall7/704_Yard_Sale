@@ -13,11 +13,7 @@ export default class Footer extends Component {
                   <div className="col-lg-4 footer_col">
                     <div className="footer_about">
                       <div className="footer_logo">
-<<<<<<< HEAD
-                        {/* < Link name="About">
-=======
                         < Link to="#" name="About">
->>>>>>> 12ad0208776470c0d7b8ac3d1fb2fe174facdf69
                           <div className="d-flex flex-row align-items-center justify-content-start">
                             <div className="footer_logo_icon"><img src="images/logo_2.png" alt="logo" /></div>
                             <div>704 Yard Sale</div>

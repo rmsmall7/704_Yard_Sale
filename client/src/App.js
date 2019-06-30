@@ -8,11 +8,7 @@ import YardPost from './pages/YardPost';
 import YardSave from "./pages/YardSave";
 import YardSaleList from './pages/YardSaleList';
 import Login from './pages/Login';
-<<<<<<< HEAD
-
-=======
 import axios from 'axios'
->>>>>>> 12ad0208776470c0d7b8ac3d1fb2fe174facdf69
 
 
 class App extends Component {
@@ -65,11 +61,7 @@ class App extends Component {
             <Route exact path="/YardPost" component={YardPost} />
             <Route exact path="/YardSave" component={YardSave} />
             <Route exact path="/YardSaleList" component={YardSaleList} />
-<<<<<<< HEAD
-            <Route exact path="/Login" component={Login} />
-=======
             <Route exact path="/Login" component={()=><Login handleUserAccess={this.handleUserAccess} isloggedIn={this.state.isLoggedIn}/>} />
->>>>>>> 12ad0208776470c0d7b8ac3d1fb2fe174facdf69
           </Switch>
         </div>
       </Router>

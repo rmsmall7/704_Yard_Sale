@@ -5,18 +5,10 @@ import App from "./App";
 import { Route, Switch } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
 import * as serviceWorker from './serviceWorker';
-<<<<<<< HEAD
-import 'spectre.css/dist/spectre.min.css';
-import 'spectre.css/dist/spectre-icons.css';
-import './index.css';
 
-
-=======
-import {BrowserRouter}from 'react-router-dom';
-// import 'spectre.css/dist/spectre.min.css';
+// import 'spectre.css/dist/sp  ectre.min.css';
 // import 'spectre.css/dist/spectre-icons.css';
 //import './index.css';
->>>>>>> 12ad0208776470c0d7b8ac3d1fb2fe174facdf69
 
 
 ReactDOM.render(
