@@ -30,7 +30,7 @@ export default class YardSaleList extends Component {
 
           {
             this.state.yardSales.map((yardSale, i) => {
-              return <p key={i + "-paragraph"}>{yardSale.location}</p>
+              return <p key={i + "-paragraph"}>{yardSale.location}  </p>
             })
           }
 
