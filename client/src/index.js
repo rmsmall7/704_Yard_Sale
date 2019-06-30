@@ -5,6 +5,9 @@ import App from "./App";
 import { Route, Switch } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
 import * as serviceWorker from './serviceWorker';
+import 'spectre.css/dist/spectre.min.css';
+import 'spectre.css/dist/spectre-icons.css';
+import './index.css';
 
 
 
