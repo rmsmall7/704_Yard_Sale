@@ -7,11 +7,14 @@ import LoginForm from '../components/LoginForm'
 // import Navbar from './components/navbar'
 // import Home from './components/home'
 class Login extends Component {
+    componentDidMount(){
+        console.log(this.props.isLoggedIn)
+    }
     render() {
         return (
             <div className="container">
                 <div style={{ marginTop: 100 }}></div>
-                <LoginForm />
+                <LoginForm handleUserAccess={this.props.handleUserAccess} isLoggedIn={this.props.isLoggedIn}/>
             </div>
         )
     }
