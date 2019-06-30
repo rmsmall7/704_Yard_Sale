@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
 function Header(props) {
   return (
     // Header//
@@ -32,6 +33,12 @@ function Header(props) {
               <button className="header_search_button"><img src="images/search.png" alt="search" /></button>
             </form>
           </div>
+          {/* User */}
+         <div className="user"><Link to="/Login">
+           <div><img src="images/user.svg" alt="https://www.flaticon.com/authors/freepik" />
+             <div>1</div>
+           </div>
+         </Link></div>
         </div>
       </div>
     </header>
