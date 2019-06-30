@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import axios from 'axios'
+import 'spectre.css/dist/spectre.min.css';
+import 'spectre.css/dist/spectre-icons.css';
+
 class LoginForm extends Component {
     constructor() {
         super()
