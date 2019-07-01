@@ -9,6 +9,7 @@ const session = require('express-session');
 const dbConnection = require('./models/connection');
 const MongoStore = require('connect-mongo')(session)
 const passport = require('./passport');
+const path = require('path');
 // const signup = require('./models/signup')
 const PORT = process.env.PORT || 8080;
 require('dotenv').config()
@@ -16,7 +17,9 @@ require('dotenv').config()
 
 
 // Connect to the Mongo DB
-// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactyardlist");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactyardlist", {
+	useNewUrlParser: true
+});
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -55,6 +58,13 @@ app.use(passport.session()) // calls the deserializeUser
 app.use(routes);
 app.use('/user', user);
 // app.use('/signup', signup);
+
+if (process.env.NODE_ENV === 'production') {
+	app.use(express.static( 'client/build'));
+	app.get('*', (req, res) =>{
+		res.sendfile(path.join(__dirname, 'client', 'build', 'index.html')); 
+	});
+};
 
 // Start the API server
 app.listen(PORT, function() {
