@@ -9,6 +9,7 @@ const session = require('express-session');
 const dbConnection = require('./models/connection');
 const MongoStore = require('connect-mongo')(session)
 const passport = require('./passport');
+// const signup = require('./models/signup')
 const PORT = process.env.PORT || 8080;
 
 
@@ -51,7 +52,8 @@ app.use(passport.session()) // calls the deserializeUser
 
 // Routes
 app.use(routes);
-app.use('/user', user)
+app.use('/user', user);
+// app.use('/signup', signup);
 
 // Start the API server
 app.listen(PORT, function() {

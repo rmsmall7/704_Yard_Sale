@@ -30,10 +30,6 @@ const yardpostSchema = new Schema({
     type: String
   }
   
-  // saved: {
-  //   type: Boolean,
-  //   default: "false"
-  // }
 });
 
 const Yard = mongoose.model("Yard", yardpostSchema);

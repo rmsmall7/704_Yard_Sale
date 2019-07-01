@@ -8,6 +8,7 @@ import YardPost from './pages/YardPost';
 import YardSave from "./pages/YardSave";
 import YardSaleList from './pages/YardSaleList';
 import Login from './pages/Login';
+import SignUp from './pages/Sign-Up';
 import axios from 'axios'
 
 
@@ -56,14 +57,11 @@ class App extends Component {
           </>}
           <Switch>
             <Route exact path="/" component={HomeNew} />
-
-
-
-
             <PrivateRoute exact isloggedIn={this.state.isLoggedIn} path="/YardPost" component={()=><YardPost isloggedIn={this.state.isLoggedIn}/>} />
             <Route exact path="/YardSave" component={YardSave} />
             <Route exact path="/YardSaleList" component={YardSaleList} />
             <Route exact path="/Login" component={()=><Login handleUserAccess={this.handleUserAccess} isloggedIn={this.state.isLoggedIn}/>} />
+            <Route exact path='/SignUp' component={()=><SignUp handleSignUp={this.handleSignUp} isRegistered={this.state.isRegistered}/>} />
           </Switch>
         </div>
       </Router>
