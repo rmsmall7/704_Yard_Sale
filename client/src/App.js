@@ -43,19 +43,7 @@ class App extends Component {
         <div>
           <Menu />
           <Header />
-          { this.state.isLoggedIn ? <>
-          <h1>"LoggedIn"</h1>
-          <h1>"LoggedIn"</h1>
-          <h1>"LoggedIn"</h1>
-          <h1>"LoggedIn"</h1>
-          <h1>"LoggedIn"</h1>
-          </> : 
-          <>
-          <h1>"NOT"</h1>
-          <h1>"NOT"</h1>
-          <h1>"NOT"</h1>
-          <h1>"NOT"</h1>
-          </>}
+          { this.state.isLoggedIn }
           <Switch>
             <PrivatRoute exact isloggedIn={this.state.isLoggedIn} path="/" component={()=><HomeNew isloggedIn={this.state.isLoggedIn}/>} />
             <Route exact path="/YardPost" component={YardPost} />
