@@ -3,20 +3,21 @@ import { Redirect } from 'react-router-dom'
 import axios from 'axios'
 
 
+
 class LoginForm extends Component {
     constructor() {
         super()
         this.state = {
             username: '',
             password: '',
-            redirectTo: null
+            redirectTo: null 
         }
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleChange = this.handleChange.bind(this)
 
     }
 
-    componentDidMount(){
+    componentDidMount() {
         console.log(this.props.isLoggedIn)
     }
     handleChange(event) {
@@ -43,7 +44,7 @@ class LoginForm extends Component {
                     // })
                     this.props.handleUserAccess(true)
                     // update the state to redirect to home
-                    
+
                 }
             }).catch(error => {
                 console.log('login error: ')
@@ -61,7 +62,7 @@ class LoginForm extends Component {
     render() {
         return (
             <div>
-                {this.props.isLoggedIn ? <Redirect to="/"/> : null}
+                {this.props.isLoggedIn ? <Redirect to="/" /> : null}
                 <h4>Login</h4>
                 <form className="form-horizontal">
                     <div className="form-group">
@@ -105,9 +106,22 @@ class LoginForm extends Component {
 
                             onClick={this.handleLogout}
                             type="submit">Logout</button>
+
+                            <br/>
+                            <br/>
+
+                        <div class="container signin">
+                            <p>New user?  Click <a href="/SignUp">HERE</a> to register!!</p>
+                        </div>
+
+                        {/* <button
+                            className="btn btn-primary col-1 col-mr-auto"
+
+                            onClick={this.handleRegister}
+                            type="submit">New User</button> */}
                     </div>
                 </form>
-            </div>
+            </div >
         )
     }
 

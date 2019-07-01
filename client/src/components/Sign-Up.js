@@ -100,6 +100,11 @@ class Signup extends Component {
                             type="submit"
                         >Sign up</button>
                     </div>
+                    <br/>
+                    <br/>
+                    <div class="container signin">
+                            <p>Already a user?  Click <a href="/LogIn">HERE</a> to go to Login Page</p>
+                        </div>
                 </form>
             </div>
         )

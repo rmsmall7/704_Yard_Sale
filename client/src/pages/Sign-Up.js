@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SignUp from '../components/Sign-up';
+import SignUp from '../components/Sign-Up';
 
 class Sign extends Component {
   componentDidMount(){
