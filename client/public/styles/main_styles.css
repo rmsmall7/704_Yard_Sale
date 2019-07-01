@@ -48,8 +48,29 @@ body
 	font-size: 14px;
 	font-weight: 400;
 	background: #FFFFFF;
-	color: #212529;
+	color: #212529; 
 }
+.SignupForm{
+	margin-top: 80px;
+	margin-left: 500px;
+	margin-bottom: 20px;
+	font-weight: bolder;
+}
+.Signup2{
+	margin-top: 80px;
+	margin-left: 300px;
+	margin-bottom: 20px;
+	font-weight: bolder;
+}
+.form-group{
+	margin-top: 20px;
+	font-size: 1.5em;
+	margin-left: 40px;
+}
+.btn-primary{
+	margin-left: 15px;
+}
+
 div
 {
 	display: block;

@@ -61,9 +61,9 @@ class LoginForm extends Component {
 
     render() {
         return (
-            <div>
+            <div className="Signup2">
                 {this.props.isLoggedIn ? <Redirect to="/" /> : null}
-                <h4>Login</h4>
+                <h3>Login</h3>
                 <form className="form-horizontal">
                     <div className="form-group">
                         <div className="col-1 col-ml-auto">
