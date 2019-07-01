@@ -91,7 +91,7 @@ render() {
 }
 }
 export default Signup
-Collapse
+
 
 
 
