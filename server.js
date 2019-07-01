@@ -11,6 +11,7 @@ const MongoStore = require('connect-mongo')(session)
 const passport = require('./passport');
 // const signup = require('./models/signup')
 const PORT = process.env.PORT || 8080;
+require('dotenv').config()
 
 
 
