@@ -8,7 +8,7 @@ export default class YardSaleList extends Component {
     yardSales: []
   }
 
-  componentDidMount(){
+  componentDidMount() {
     this.getYardSales()
   }
 
@@ -17,7 +17,7 @@ export default class YardSaleList extends Component {
       .then(dbData => {
         this.setState({
           yardSales: dbData.data
-        }, ()=>console.log(this.state.yardSales))
+        }, () => console.log(this.state.yardSales))
       })
       .catch(err => console.log(err))
   }
@@ -30,14 +30,29 @@ export default class YardSaleList extends Component {
 
           {
             this.state.yardSales.map((yardSale, i) => {
-              return <p key={i + "-paragraph"}>{yardSale.location}</p>
+              return (
+                <div className="card mx-2 mb-3" style={{  width: "80rem"}}>
+                  <div className="card-header">
+                    <p key={i + "-paragraph"}>{yardSale.title}</p>
+                  </div>
+                  <ul className="list-group list-group-flush">
+                    <li className="list-group-item" key={i + "-location"}>Location: {yardSale.location}</li>
+                    <li className="list-group-item" key={i + "-start_time"}>Start Time: {yardSale.start_time}</li>
+                    <li className="list-group-item" key={i + "-end_time"}>Duration: {yardSale.end_time}</li>
+                    <li className="list-group-item" key={i + "-date"}>Date: {yardSale.date}</li>
+                    <li className="list-group-item" key={i + "-items"}>Items for Sale: {yardSale.items}</li>
+                  </ul>
+                </div>
+              )
             })
+
+
           }
 
         </div>
-       
+
       </div>
-      
+
     )
   }
 }

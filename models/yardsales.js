@@ -23,12 +23,13 @@ const yardpostSchema = new Schema({
   },
 
   date: {
-    type: Date
+    type: String
   },
   
   Picture: {
     type: String
   }
+  
 });
 
 const Yard = mongoose.model("Yard", yardpostSchema);
