@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import PrivatRoute from "./components/PrivateRoute";
+import PrivateRoute from "./components/PrivateRoute";
 import Menu from './components/Menu';
 import Header from './components/Header';
 import HomeNew from './pages/HomeNew';
@@ -44,21 +44,23 @@ class App extends Component {
           <Menu />
           <Header />
           { this.state.isLoggedIn ? <>
-          <h1>"LoggedIn"</h1>
-          <h1>"LoggedIn"</h1>
-          <h1>"LoggedIn"</h1>
-          <h1>"LoggedIn"</h1>
-          <h1>"LoggedIn"</h1>
+          <h3>"You are Logged In"</h3>
+          <h3>"You are Logged In"</h3>
+          <h3>"You are Logged In"</h3>
+   
           </> : 
           <>
-          <h1>"NOT"</h1>
-          <h1>"NOT"</h1>
-          <h1>"NOT"</h1>
-          <h1>"NOT"</h1>
+          <h3>"You are Logged Out"</h3>
+          <h3>"You are Logged Out"</h3>
+          <h3>"You are Logged Out"</h3>
           </>}
           <Switch>
-            <PrivatRoute exact isloggedIn={this.state.isLoggedIn} path="/" component={()=><HomeNew isloggedIn={this.state.isLoggedIn}/>} />
-            <Route exact path="/YardPost" component={YardPost} />
+            <Route exact path="/" component={HomeNew} />
+
+
+
+
+            <PrivateRoute exact isloggedIn={this.state.isLoggedIn} path="/YardPost" component={()=><YardPost isloggedIn={this.state.isLoggedIn}/>} />
             <Route exact path="/YardSave" component={YardSave} />
             <Route exact path="/YardSaleList" component={YardSaleList} />
             <Route exact path="/Login" component={()=><Login handleUserAccess={this.handleUserAccess} isloggedIn={this.state.isLoggedIn}/>} />
