@@ -57,11 +57,11 @@ class App extends Component {
           <h1>"NOT"</h1>
           </>}
           <Switch>
-            <PrivatRoute exact isloggedIn={this.state.isLoggedIn} path="/" component={()=><HomeNew isloggedIn={this.state.isLoggedIn}/>} />
+            <PrivatRoute exact isloggedIn={this.state.isLoggedIn} path="/" component={HomeNew} />
             <Route exact path="/YardPost" component={YardPost} />
             <Route exact path="/YardSave" component={YardSave} />
             <Route exact path="/YardSaleList" component={YardSaleList} />
-            <Route exact path="/Login" component={()=><Login handleUserAccess={this.handleUserAccess} isloggedIn={this.state.isLoggedIn}/>} />
+            <Route exact path="/Login" component={()=><Login handleUserAccess={this.handleUserAccess}/>} />
           </Switch>
         </div>
       </Router>
