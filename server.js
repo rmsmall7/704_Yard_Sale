@@ -9,7 +9,6 @@ const session = require('express-session');
 const dbConnection = require('./models/connection');
 const MongoStore = require('connect-mongo')(session)
 const passport = require('./passport');
-// const signup = require('./models/signup')
 const PORT = process.env.PORT || 8080;
 
 
